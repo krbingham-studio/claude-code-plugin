@@ -1,8 +1,17 @@
 {
-  "name": "claude-code-plugin",
-  "version": "0.1.0",
-  "description": "A Claude Code plugin.",
+  "name": "krbingham-studio-development-tools",
+  "version": "1.0.0",
+  "description": "Git branch, commit and PR conventions keyed to Jira tickets, a Notion documentation workflow, and the studio's roster of agents and skills.",
   "author": {
-    "name": "krbingham-studio"
-  }
+    "name": "Kyle Bingham"
+  },
+  "homepage": "https://github.com/krbingham-studio/claude-code-plugin/tree/main",
+  "repository": "https://github.com/krbingham-studio/claude-code-plugin",
+  "keywords": [
+    "git-workflow",
+    "jira",
+    "notion",
+    "conventional-commits",
+    "code-review"
+  ]
 }

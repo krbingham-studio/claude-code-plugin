@@ -1,4 +1,4 @@
-# claude-code-plugin
+# Claude Code Plugin
 
 A [Claude Code](https://docs.claude.com/en/docs/claude-code) plugin.
 
