@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/krbingham-studio/claude-code-plugin/compare/v1.0.0...v1.1.0) (2026-09-03)
+
+
+### Features
+
+* add marketplace.json so the repo can be added as a plugin marketplace (STUDIO-94) ([#2](https://github.com/krbingham-studio/claude-code-plugin/issues/2)) ([cd25e28](https://github.com/krbingham-studio/claude-code-plugin/commit/cd25e284fc0c23f6753b1fd3a88ecf150e1c3fe0))
+
 # 1.0.0 (2026-09-03)
 
 

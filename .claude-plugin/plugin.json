@@ -1,6 +1,6 @@
 {
   "name": "krbingham-studio-development-tools",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Git branch, commit and PR conventions keyed to Jira tickets, a Notion documentation workflow, and the studio's roster of agents and skills.",
   "author": {
     "name": "Kyle Bingham"
