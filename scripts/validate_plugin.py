@@ -55,6 +55,38 @@ def check_manifest():
         fail(f"{path}: 'name' should be lowercase, hyphen-separated ({name!r})")
 
 
+def check_marketplace():
+    path = ".claude-plugin/marketplace.json"
+    if not glob.glob(path):
+        return
+
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        fail(f"{path}: invalid JSON ({e})")
+        return
+
+    if not data.get("name"):
+        fail(f"{path}: missing required field 'name'")
+    if not (data.get("owner") or {}).get("name"):
+        fail(f"{path}: missing required field 'owner.name'")
+
+    plugins = data.get("plugins")
+    if not plugins:
+        fail(f"{path}: 'plugins' must be a non-empty array")
+        return
+
+    for i, entry in enumerate(plugins):
+        if not entry.get("name"):
+            fail(f"{path}: plugins[{i}] missing required field 'name'")
+        source = entry.get("source")
+        if not source:
+            fail(f"{path}: plugins[{i}] missing required field 'source'")
+        elif isinstance(source, str) and not source.startswith("./"):
+            fail(f"{path}: plugins[{i}].source relative paths must start with './' ({source!r})")
+
+
 def check_entries(pattern, kind, name_from_path):
     seen = {}
     for path in sorted(glob.glob(pattern)):
@@ -79,6 +111,7 @@ def check_entries(pattern, kind, name_from_path):
 
 def main():
     check_manifest()
+    check_marketplace()
     check_entries(
         "agents/*.md",
         "agent",
