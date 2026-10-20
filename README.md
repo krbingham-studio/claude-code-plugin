@@ -1,3 +1,5 @@
+> **Moved to GitLab:** https://gitlab.com/krbingham-studio/infrastructure/claude-code-plugin — this GitHub repository is archived and no longer updated.
+
 # Claude Code Plugin
 
 A [Claude Code](https://docs.claude.com/en/docs/claude-code) plugin.
